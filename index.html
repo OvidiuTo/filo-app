@@ -20,18 +20,25 @@ svg{display:block;flex-shrink:0}
 summary{cursor:pointer;list-style:none}
 summary::-webkit-details-marker{display:none}
 details[open] .faq-plus{transform:rotate(45deg)}
+@media (max-width:640px){
+.nav-links{order:3;flex:0 0 100%!important;flex-wrap:nowrap!important;overflow-x:auto;gap:22px!important;white-space:nowrap;scrollbar-width:none;margin-top:-4px}
+.nav-links::-webkit-scrollbar{display:none}
+.nav-links + a{margin-left:auto}
+}
 </style>
 </head>
 <body>
 <div style="background:#F6F4EF;color:#16161A;font-family:Geist,system-ui,sans-serif;font-size:17px;line-height:1.55">
+
   <!-- nav -->
   <header style="position:sticky;top:0;z-index:5;background:rgba(246,244,239,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(22,22,26,.06)">
     <nav aria-label="Main" style="max-width:1200px;margin:0 auto;padding:14px 20px;display:flex;flex-wrap:wrap;align-items:center;gap:12px 28px">
       <a href="index.html" style="display:flex;align-items:center;gap:10px;color:#16161A;font-size:20px;font-weight:600;letter-spacing:-0.02em">
         <svg width="30" height="30" viewBox="0 0 28 28" aria-hidden="true"><rect width="28" height="28" rx="8" fill="#3B3AD4"></rect><path d="M9.5 7h6l4 4v9a1.2 1.2 0 0 1-1.2 1.2H9.5A1.2 1.2 0 0 1 8.3 20V8.2A1.2 1.2 0 0 1 9.5 7z" fill="#FFFFFF"></path><path d="M15.5 7v4h4z" fill="#C9C8F5"></path><path d="M10.8 14.6h5.6M10.8 17.4h3.6" stroke="#3B3AD4" stroke-width="1.4" stroke-linecap="round"></path></svg>Filo
       </a>
-      <div style="flex:1;display:flex;flex-wrap:wrap;gap:6px 24px;font-size:15px;font-weight:500">
+      <div class="nav-links" style="flex:1;display:flex;flex-wrap:wrap;gap:6px 24px;font-size:15px;font-weight:500">
         <a href="#features" style="color:#3E3D44;padding:8px 0">Features</a>
+        <a href="#devices" style="color:#3E3D44;padding:8px 0">iPhone, iPad &amp; Mac</a>
         <a href="#privacy" style="color:#3E3D44;padding:8px 0">Privacy</a>
         <a href="#pricing" style="color:#3E3D44;padding:8px 0">Pricing</a>
         <a href="#faq" style="color:#3E3D44;padding:8px 0">FAQ</a>
@@ -39,13 +46,14 @@ details[open] .faq-plus{transform:rotate(45deg)}
       <a href="#download" style="height:42px;padding:0 18px;border-radius:13px;background:#16161A;color:#FFFFFF;font-size:15px;font-weight:600;display:flex;align-items:center">Download free</a>
     </nav>
   </header>
+
   <main>
     <!-- hero -->
     <section style="max-width:1200px;margin:0 auto;padding:72px 20px 40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:48px;align-items:center">
       <div>
-        <span style="display:inline-flex;align-items:center;gap:8px;height:32px;padding:0 12px;border-radius:16px;background:#FFFFFF;box-shadow:inset 0 0 0 1px #E2DED4;font-size:14px;font-weight:500;color:#3E3D44"><span style="width:8px;height:8px;border-radius:4px;background:#17915A"></span>New · for iPhone, iPad and Mac</span>
+        <span style="display:inline-flex;align-items:center;gap:8px;height:32px;padding:0 12px;border-radius:16px;background:#FFFFFF;box-shadow:inset 0 0 0 1px #E2DED4;font-size:14px;font-weight:500;color:#3E3D44"><span style="width:8px;height:8px;border-radius:4px;background:#17915A"></span>For iPhone, iPad and Mac</span>
         <h1 style="margin:22px 0 0;font-size:clamp(44px,6vw,76px);line-height:1.0;font-weight:600;letter-spacing:-0.045em">All your documents.<br><span style="color:#3B3AD4">One beautiful place.</span></h1>
-        <p style="margin:22px 0 0;font-size:20px;line-height:1.5;color:#5F5E66;max-width:520px">Read, scan, sign and organize PDFs and Office files on your iPhone, iPad and Mac. Everything works offline, with no account, and your files stay on your device.</p>
+        <p style="margin:22px 0 0;font-size:20px;line-height:1.5;color:#5F5E66;max-width:520px">Read, scan, sign and organize PDFs and Office files on iPhone, iPad and Mac. Everything works offline, with no account, and your files stay on your devices.</p>
         <div id="download" style="margin-top:32px;display:flex;flex-wrap:wrap;gap:12px;align-items:center">
           <a href="#download" data-app-store-link style="height:58px;padding:0 24px;border-radius:16px;background:#16161A;color:#FFFFFF;display:flex;align-items:center;gap:12px">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"></path></svg>
@@ -61,11 +69,12 @@ details[open] .faq-plus{transform:rotate(45deg)}
       </div>
       <div style="position:relative;display:flex;justify-content:center;align-items:flex-end;padding:20px 0">
         <div aria-hidden="true" style="position:absolute;left:50%;top:50%;width:min(560px,100%);aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:#EFEDE7"></div>
-        <div style="position:relative;width:34%;max-width:210px;aspect-ratio:390/844;border-radius:34px;background:#16161A;padding:7px;box-sizing:border-box;box-shadow:0 30px 60px rgba(22,22,26,.20);transform:rotate(-7deg) translate(18%,4%)"><img src="assets/img/reader.png" width="600" height="1300" loading="lazy" alt="Reading a lease agreement in Filo" style="width:100%;height:100%;border-radius:28px;display:block;object-fit:cover"></div>
-        <div style="position:relative;z-index:1;width:40%;max-width:250px;aspect-ratio:390/844;border-radius:40px;background:#16161A;padding:8px;box-sizing:border-box;box-shadow:0 40px 80px rgba(22,22,26,.28)"><img src="assets/img/home.png" width="600" height="1300" loading="lazy" alt="Filo home screen with recent documents" style="width:100%;height:100%;border-radius:33px;display:block;object-fit:cover"></div>
-        <div style="position:relative;width:34%;max-width:210px;aspect-ratio:390/844;border-radius:34px;background:#16161A;padding:7px;box-sizing:border-box;box-shadow:0 30px 60px rgba(22,22,26,.20);transform:rotate(7deg) translate(-18%,4%)"><img src="assets/img/scanner.png" width="600" height="1300" loading="lazy" alt="Scanning a document with Filo" style="width:100%;height:100%;border-radius:28px;display:block;object-fit:cover"></div>
+        <div style="position:relative;width:34%;max-width:210px;border-radius:34px;background:#16161A;padding:7px;box-sizing:border-box;box-shadow:0 30px 60px rgba(22,22,26,.20);transform:rotate(-7deg) translate(18%,4%)"><img src="assets/img/reader.png" width="600" height="1300" loading="lazy" alt="Reading a lease agreement in Filo" style="width:100%;height:auto;border-radius:28px;display:block"></div>
+        <div style="position:relative;z-index:1;width:40%;max-width:250px;border-radius:40px;background:#16161A;padding:8px;box-sizing:border-box;box-shadow:0 40px 80px rgba(22,22,26,.28)"><img src="assets/img/home.png" width="600" height="1300" loading="lazy" alt="Filo home screen with recent documents" style="width:100%;height:auto;border-radius:33px;display:block"></div>
+        <div style="position:relative;width:34%;max-width:210px;border-radius:34px;background:#16161A;padding:7px;box-sizing:border-box;box-shadow:0 30px 60px rgba(22,22,26,.20);transform:rotate(7deg) translate(-18%,4%)"><img src="assets/img/scanner.png" width="600" height="1300" loading="lazy" alt="Scanning a document with Filo" style="width:100%;height:auto;border-radius:28px;display:block"></div>
       </div>
     </section>
+
     <!-- formats strip -->
     <section aria-label="Supported formats" style="max-width:1200px;margin:0 auto;padding:24px 20px 8px">
       <div style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px 12px;font-family:'Geist Mono',monospace;font-size:13px;font-weight:500">
@@ -78,13 +87,38 @@ details[open] .faq-plus{transform:rotate(45deg)}
         <span style="padding:5px 10px;border-radius:7px;background:#ECEBE7;color:#55545B">TXT · CSV · RTF</span>
       </div>
     </section>
+
+    <!-- devices -->
+    <section id="devices" style="max-width:1200px;margin:0 auto;padding:96px 20px 0">
+      <p style="margin:0;text-align:center;font-family:'Geist Mono',monospace;font-size:13px;letter-spacing:.06em;color:#66656C">IPHONE · IPAD · MAC</p>
+      <h2 style="margin:10px auto 0;text-align:center;font-size:clamp(34px,4vw,52px);line-height:1.05;font-weight:600;letter-spacing:-0.035em;max-width:760px">One app. Every screen you own.</h2>
+      <p style="margin:16px auto 0;text-align:center;font-size:18px;color:#5F5E66;max-width:600px">Scan on your iPhone, mark up on your iPad, finish on your Mac. Filo feels at home on each one, from the pocket to the desk.</p>
+
+      <div style="position:relative;margin:48px auto 0;width:100%;max-width:1080px;aspect-ratio:16/9">
+        <div style="position:absolute;left:10%;top:0;width:80%;aspect-ratio:1280/800;border-radius:14px;overflow:hidden;background:#FFFFFF;box-shadow:0 0 0 1px rgba(0,0,0,.10),0 40px 80px rgba(22,22,26,.18)">
+          <img src="assets/img/mac.png" width="1728" height="1080" loading="lazy" alt="Filo on Mac, showing the library with a folder sidebar" style="width:100%;height:100%;display:block;object-fit:cover">
+          <span aria-hidden="true" style="position:absolute;left:1.4%;top:2.2%;display:flex;gap:6px"><span style="width:11px;height:11px;border-radius:6px;background:#FF5F57"></span><span style="width:11px;height:11px;border-radius:6px;background:#FEBC2E"></span><span style="width:11px;height:11px;border-radius:6px;background:#28C840"></span></span>
+        </div>
+        <div style="position:absolute;left:0;bottom:0;width:27%;border-radius:22px;background:#16161A;padding:1.1%;box-sizing:border-box;box-shadow:0 30px 60px rgba(22,22,26,.24)"><img src="assets/img/ipad.png" width="700" height="934" loading="lazy" alt="Filo on iPad, marking up a PDF" style="width:100%;height:auto;border-radius:14px;display:block"></div>
+        <div style="position:absolute;right:3%;bottom:0;width:15%;border-radius:24px;background:#16161A;padding:1%;box-sizing:border-box;box-shadow:0 30px 60px rgba(22,22,26,.26)"><img src="assets/img/home.png" width="600" height="1300" loading="lazy" alt="Filo on iPhone, home screen" style="width:100%;height:auto;border-radius:19px;display:block"></div>
+      </div>
+
+      <div style="margin-top:48px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:14px">
+        <div style="padding:22px;border-radius:22px;background:#FFFFFF;border:1px solid rgba(22,22,26,.06)"><div style="font-size:17px;font-weight:600">iPhone</div><p style="margin:6px 0 0;font-size:15px;color:#5F5E66">Scan receipts and sign forms the moment they land in your hand.</p></div>
+        <div style="padding:22px;border-radius:22px;background:#FFFFFF;border:1px solid rgba(22,22,26,.06)"><div style="font-size:17px;font-weight:600">iPad</div><p style="margin:6px 0 0;font-size:15px;color:#5F5E66">A sidebar library, a page strip and Apple Pencil markup with room to think.</p></div>
+        <div style="padding:22px;border-radius:22px;background:#FFFFFF;border:1px solid rgba(22,22,26,.06)"><div style="font-size:17px;font-weight:600">Mac</div><p style="margin:6px 0 0;font-size:15px;color:#5F5E66">Menus, keyboard shortcuts and drag and drop from Finder. Scan on your iPhone, and with Pro sync the PDF is waiting on your Mac.</p></div>
+      </div>
+      <p style="margin:18px 0 0;text-align:center;font-size:15px;color:#3E3D44"><strong style="font-weight:600">Buy Pro once, use it everywhere.</strong> With Pro, your library syncs between all your devices through your own iCloud.</p>
+    </section>
+
     <!-- features -->
     <section id="features" style="max-width:1200px;margin:0 auto;padding:96px 20px 0">
       <p style="margin:0;font-family:'Geist Mono',monospace;font-size:13px;letter-spacing:.06em;color:#66656C">FEATURES</p>
       <h2 style="margin:10px 0 0;font-size:clamp(34px,4vw,52px);line-height:1.05;font-weight:600;letter-spacing:-0.035em;max-width:720px">Everything you do with paper, done in seconds.</h2>
+
       <div style="margin-top:56px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:40px 64px;align-items:center">
         <div style="border-radius:32px;background:#EFEDE7;padding:48px 20px;display:flex;justify-content:center">
-          <div style="width:62%;max-width:270px;aspect-ratio:390/844;border-radius:40px;background:#16161A;padding:8px;box-sizing:border-box;box-shadow:0 30px 60px rgba(22,22,26,.18)"><img src="assets/img/scanner.png" width="600" height="1300" loading="lazy" alt="Filo scanner detecting a document's edges" style="width:100%;height:100%;border-radius:33px;display:block;object-fit:cover"></div>
+          <div style="width:62%;max-width:270px;border-radius:40px;background:#16161A;padding:8px;box-sizing:border-box;box-shadow:0 30px 60px rgba(22,22,26,.18)"><img src="assets/img/scanner.png" width="600" height="1300" loading="lazy" alt="Filo scanner detecting a document's edges" style="width:100%;height:auto;border-radius:33px;display:block"></div>
         </div>
         <div>
           <span style="display:inline-flex;width:48px;height:48px;border-radius:14px;background:#EAEAFB;color:#3B3AD4;align-items:center;justify-content:center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M20 16v2a2 2 0 0 1-2 2h-2M8 20H6a2 2 0 0 1-2-2v-2M7 12h10"></path></svg></span>
@@ -97,6 +131,7 @@ details[open] .faq-plus{transform:rotate(45deg)}
           </ul>
         </div>
       </div>
+
       <div style="margin-top:88px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:40px 64px;align-items:center">
         <div>
           <span style="display:inline-flex;width:48px;height:48px;border-radius:14px;background:#EAEAFB;color:#3B3AD4;align-items:center;justify-content:center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20c2-1 3.5-1 5 0s3 1 5 0M14.5 4.5l3 3L9 16l-3.5.5L6 13z"></path></svg></span>
@@ -104,12 +139,13 @@ details[open] .faq-plus{transform:rotate(45deg)}
           <p style="margin:14px 0 0;font-size:18px;color:#5F5E66;max-width:480px">Draw your signature once with your finger. Then drop it onto leases, forms and NDAs, resize it, add the date and send the PDF back in under a minute.</p>
         </div>
         <div style="border-radius:32px;background:#EFEDE7;padding:48px 20px;display:flex;justify-content:center">
-          <div style="width:62%;max-width:270px;aspect-ratio:390/844;border-radius:40px;background:#16161A;padding:8px;box-sizing:border-box;box-shadow:0 30px 60px rgba(22,22,26,.18)"><img src="assets/img/sign.png" width="600" height="1300" loading="lazy" alt="Placing a signature on a PDF in Filo" style="width:100%;height:100%;border-radius:33px;display:block;object-fit:cover"></div>
+          <div style="width:62%;max-width:270px;border-radius:40px;background:#16161A;padding:8px;box-sizing:border-box;box-shadow:0 30px 60px rgba(22,22,26,.18)"><img src="assets/img/sign.png" width="600" height="1300" loading="lazy" alt="Placing a signature on a PDF in Filo" style="width:100%;height:auto;border-radius:33px;display:block"></div>
         </div>
       </div>
+
       <div style="margin-top:88px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:40px 64px;align-items:center">
         <div style="border-radius:32px;background:#EFEDE7;padding:48px 20px;display:flex;justify-content:center">
-          <div style="width:62%;max-width:270px;aspect-ratio:390/844;border-radius:40px;background:#16161A;padding:8px;box-sizing:border-box;box-shadow:0 30px 60px rgba(22,22,26,.18)"><img src="assets/img/organize.png" width="600" height="1300" loading="lazy" alt="Reordering PDF pages by dragging in Filo" style="width:100%;height:100%;border-radius:33px;display:block;object-fit:cover"></div>
+          <div style="width:62%;max-width:270px;border-radius:40px;background:#16161A;padding:8px;box-sizing:border-box;box-shadow:0 30px 60px rgba(22,22,26,.18)"><img src="assets/img/organize.png" width="600" height="1300" loading="lazy" alt="Reordering PDF pages by dragging in Filo" style="width:100%;height:auto;border-radius:33px;display:block"></div>
         </div>
         <div>
           <span style="display:inline-flex;width:48px;height:48px;border-radius:14px;background:#EAEAFB;color:#3B3AD4;align-items:center;justify-content:center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="6.5" height="7.5" rx="1.5"></rect><rect x="13.5" y="4" width="6.5" height="7.5" rx="1.5"></rect><rect x="4" y="13.5" width="6.5" height="7" rx="1.5"></rect><rect x="13.5" y="13.5" width="6.5" height="7" rx="1.5"></rect></svg></span>
@@ -117,6 +153,7 @@ details[open] .faq-plus{transform:rotate(45deg)}
           <p style="margin:14px 0 0;font-size:18px;color:#5F5E66;max-width:480px">Drag pages to reorder, rotate a sideways scan, pull out the three pages you need, or merge a whole folder into one PDF.</p>
         </div>
       </div>
+
       <div style="margin-top:96px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:14px">
         <div style="padding:22px;border-radius:22px;background:#FFFFFF;border:1px solid rgba(22,22,26,.06)"><div style="font-size:17px;font-weight:600">Mark up</div><p style="margin:6px 0 0;font-size:15px;color:#5F5E66">Highlight, underline, draw and add notes without covering the page.</p></div>
         <div style="padding:22px;border-radius:22px;background:#FFFFFF;border:1px solid rgba(22,22,26,.06)"><div style="font-size:17px;font-weight:600">Create PDF</div><p style="margin:6px 0 0;font-size:15px;color:#5F5E66">Turn photos and images into one PDF, in the order you choose.</p></div>
@@ -124,12 +161,13 @@ details[open] .faq-plus{transform:rotate(45deg)}
         <div style="padding:22px;border-radius:22px;background:#FFFFFF;border:1px solid rgba(22,22,26,.06)"><div style="font-size:17px;font-weight:600">Compress <span style="font-family:'Geist Mono',monospace;font-size:10px;font-weight:500;letter-spacing:.06em;color:#3B3AD4;border:1px solid #C9C8F5;border-radius:5px;padding:1px 5px;vertical-align:2px">PRO</span></div><p style="margin:6px 0 0;font-size:15px;color:#5F5E66">Shrink big PDFs so they fit in an email, with a size preview first.</p></div>
       </div>
     </section>
+
     <!-- privacy band -->
     <section id="privacy" style="margin-top:112px;background:#16161A;color:#F3F2EE">
       <div style="max-width:1200px;margin:0 auto;padding:96px 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:48px;align-items:center">
         <div>
           <span style="display:inline-flex;width:56px;height:56px;border-radius:28px;background:#5B59E8;align-items:center;justify-content:center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="10.5" width="14" height="9.5" rx="2"></rect><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5M12 14.5v2"></path></svg></span>
-          <h2 style="margin:22px 0 0;font-size:clamp(34px,4vw,52px);line-height:1.05;font-weight:600;letter-spacing:-0.035em">Your files stay on your device.</h2>
+          <h2 style="margin:22px 0 0;font-size:clamp(34px,4vw,52px);line-height:1.05;font-weight:600;letter-spacing:-0.035em">Your files stay on your devices.</h2>
           <p style="margin:16px 0 0;font-size:18px;color:#B3B2B9;max-width:480px">There’s no Filo account and no Filo cloud. Scanning, text recognition and conversions all happen on your device, so your documents stay private even from us.</p>
           <a href="privacy.html" style="display:inline-block;margin-top:22px;color:#B3B1FF;font-weight:600;font-size:16px;padding:6px 0">Read our privacy policy →</a>
         </div>
@@ -141,6 +179,7 @@ details[open] .faq-plus{transform:rotate(45deg)}
         </div>
       </div>
     </section>
+
     <!-- pricing -->
     <section id="pricing" style="max-width:1200px;margin:0 auto;padding:112px 20px 0">
       <p style="margin:0;text-align:center;font-family:'Geist Mono',monospace;font-size:13px;letter-spacing:.06em;color:#66656C">PRICING</p>
@@ -156,6 +195,7 @@ details[open] .faq-plus{transform:rotate(45deg)}
             <li>Sign, highlight and annotate</li>
             <li>Merge, split, reorder, and photos to PDF</li>
             <li>Folders, favorites and search</li>
+            <li>On iPhone, iPad and Mac</li>
           </ul>
         </div>
         <div style="padding:32px;border-radius:28px;background:#F4F4FE;box-shadow:inset 0 0 0 2px #3B3AD4">
@@ -169,12 +209,14 @@ details[open] .faq-plus{transform:rotate(45deg)}
             <li>Sync across iPhone, iPad and Mac with your iCloud</li>
             <li>Private vault, locked with Face ID or Touch ID</li>
             <li>Compress, protect, watermark and batch tools</li>
+            <li>One purchase for iPhone, iPad and Mac</li>
             <li>Family Sharing for up to 6 people</li>
           </ul>
         </div>
       </div>
       <p style="margin:18px 0 0;text-align:center;font-size:13.5px;color:#66656C">Prices in USD; local prices are shown in the App Store. Subscriptions renew automatically until cancelled in Settings › Apple ID.</p>
     </section>
+
     <!-- faq -->
     <section id="faq" style="max-width:820px;margin:0 auto;padding:112px 20px 0">
       <h2 style="margin:0;font-size:clamp(32px,4vw,44px);line-height:1.1;font-weight:600;letter-spacing:-0.03em">Questions, answered</h2>
@@ -192,12 +234,12 @@ details[open] .faq-plus{transform:rotate(45deg)}
           <p style="margin:0 0 20px;color:#5F5E66">Office files open read-only, in Apple’s built-in viewer. Filo doesn’t edit or convert them; to sign or mark up, use a PDF version.</p>
         </details>
         <details style="padding:0 22px;border-bottom:1px solid #EFECE5">
-          <summary style="display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:64px;font-size:17px;font-weight:600">How does the free trial work?<span class="faq-plus" aria-hidden="true" style="font-size:24px;font-weight:400;color:#5F5E66;transition:transform .2s">+</span></summary>
-          <p style="margin:0 0 20px;color:#5F5E66">The yearly plan starts with 7 free days. We remind you on day 5. Cancel at least 24 hours before the trial ends, in Settings › [your name] › Subscriptions, and you won’t be charged.</p>
+          <summary style="display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:64px;font-size:17px;font-weight:600">Does Filo work on iPad and Mac?<span class="faq-plus" aria-hidden="true" style="font-size:24px;font-weight:400;color:#5F5E66;transition:transform .2s">+</span></summary>
+          <p style="margin:0 0 20px;color:#5F5E66">Yes. It’s one app for iPhone, iPad and Mac, so you download it once from the App Store. Pro bought on one device unlocks on all of them (tap Restore Purchases the first time), and Pro sync keeps your library the same everywhere.</p>
         </details>
         <details style="padding:0 22px;border-bottom:1px solid #EFECE5">
-          <summary style="display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:64px;font-size:17px;font-weight:600">Does Filo work on iPad and Mac?<span class="faq-plus" aria-hidden="true" style="font-size:24px;font-weight:400;color:#5F5E66;transition:transform .2s">+</span></summary>
-          <p style="margin:0 0 20px;color:#5F5E66">Yes. It’s one app for iPhone, iPad and Mac. Buy Pro once with your Apple ID, then tap Restore Purchases on your other devices.</p>
+          <summary style="display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:64px;font-size:17px;font-weight:600">How does the free trial work?<span class="faq-plus" aria-hidden="true" style="font-size:24px;font-weight:400;color:#5F5E66;transition:transform .2s">+</span></summary>
+          <p style="margin:0 0 20px;color:#5F5E66">The yearly plan starts with 7 free days. We remind you on day 5. Cancel at least 24 hours before the trial ends, in Settings › [your name] › Subscriptions, and you won’t be charged.</p>
         </details>
         <details style="padding:0 22px">
           <summary style="display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:64px;font-size:17px;font-weight:600">Are signatures made in Filo legally valid?<span class="faq-plus" aria-hidden="true" style="font-size:24px;font-weight:400;color:#5F5E66;transition:transform .2s">+</span></summary>
@@ -206,6 +248,7 @@ details[open] .faq-plus{transform:rotate(45deg)}
       </div>
       <p id="support" style="margin:20px 0 0;font-size:16px;color:#5F5E66">Still need help? Email <a href="mailto:ovidiutoma.app+filo@gmail.com">ovidiutoma.app+filo@gmail.com</a>.</p>
     </section>
+
     <!-- final CTA -->
     <section style="max-width:1200px;margin:0 auto;padding:112px 20px 0">
       <div style="border-radius:36px;background:#EAEAFB;padding:64px 28px;text-align:center">
@@ -215,6 +258,7 @@ details[open] .faq-plus{transform:rotate(45deg)}
       </div>
     </section>
   </main>
+
   <footer style="max-width:1200px;margin:0 auto;padding:72px 20px 48px;display:flex;flex-wrap:wrap;gap:20px 40px;align-items:center;justify-content:space-between;font-size:14px;color:#5F5E66">
     <div style="display:flex;align-items:center;gap:10px;color:#16161A;font-weight:600"><svg width="24" height="24" viewBox="0 0 28 28" aria-hidden="true"><rect width="28" height="28" rx="8" fill="#3B3AD4"></rect><path d="M9.5 7h6l4 4v9a1.2 1.2 0 0 1-1.2 1.2H9.5A1.2 1.2 0 0 1 8.3 20V8.2A1.2 1.2 0 0 1 9.5 7z" fill="#FFFFFF"></path></svg>Filo <span style="font-weight:400;color:#5F5E66">© 2026 Ovidiu Toma</span></div>
     <nav aria-label="Legal" style="display:flex;flex-wrap:wrap;gap:8px 24px">
